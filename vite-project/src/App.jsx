@@ -1,12 +1,10 @@
-import { useState } from 'react'
+import Clock from './components/clock';
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div><h1>Hello World!</h1></div>
-  )
+    <div><Clock locale="bn-BD"/></div>
+  );
 }
 
 export default App;
