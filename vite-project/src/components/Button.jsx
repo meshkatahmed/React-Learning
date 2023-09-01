@@ -10,12 +10,15 @@ class Button extends Component {
     return true;
   }
   render() {
-    console.log('Button componennt rendered');
-    const {change,locale} = this.props;
+    const {change,locale,show,enable} = this.props;
+    if(!enable) return null;
     return (
-      <button type='submit' onClick={()=>change(locale)}>
-        Click here
-      </button>
+      <div>
+        <button type='submit' onClick={()=>change(locale)}>
+          {locale==='en-US' ? 'ঘড়ি পরিবর্তন করুন': 'Change Clock'}
+        </button>
+        {show && <p>Hello</p>}
+      </div>
     );
   };
 };
