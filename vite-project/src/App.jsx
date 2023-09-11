@@ -1,16 +1,15 @@
-// import Clock from './components/Clock';
-// import ClockList from "./components/ClockList";
-import Form from "./components/Form";
-import Calculator from "./components/boilingVerdict/Calculator";
+import Emoji from "./components/composition/emoji";
+import Text from "./components/composition/text";
+import Bracket from "./components/composition/bracket";
 
 function App() {
-  // const qunatities = [1,2,3];
   return (
-    <div>
-      {/* <ClockList quantity={qunatities}/> */}
-      {/* <Form/> */}
-      <Calculator/>
-    </div>
+    <Emoji>
+      {(addEmoji) => 
+        <Bracket>
+          {(addBracket) => <Text addEmoji={addEmoji} addBracket={addBracket}/>}
+        </Bracket>} 
+    </Emoji>
   );
 }
 
