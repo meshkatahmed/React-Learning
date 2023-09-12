@@ -3,7 +3,7 @@ import { Component } from "react"
 const withCounter = (OriginalComponent) => {
     class NewComponent extends Component {
         state = {count:0};
-        handleClick = () => {
+        incrementCount = () => {
         // this.setState({count:this.state.count+1});
         // In case of returning an object we must have to wrap the return
         // statement with parantheses
@@ -13,7 +13,7 @@ const withCounter = (OriginalComponent) => {
             const {count} = this.state;
             return <OriginalComponent
                         count={count} 
-                        handleClick={this.handleClick}
+                        incrementCount={this.incrementCount}
                     />;
         }
     }

@@ -1,10 +1,10 @@
-import withCounter from "./HOC/withCounter";
+import withCounter from "../HOC/withCounter";
 
 const HoverCounter = (props) => {
-    const {count,handleClick} = props;
+    const {count,incrementCount} = props;
     return (
         <div>
-            <h1 onMouseOver={handleClick}>
+            <h1 onMouseOver={incrementCount}>
                 Hovered {count} times
             </h1>
         </div>
