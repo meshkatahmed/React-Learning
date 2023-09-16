@@ -6,23 +6,36 @@ import themeContext from "./contexts/themeContext";
 
 export default class App extends Component {
   state = {
-    theme: 'dark',
+    tryok: 1,
+    value: {
+      theme: 'dark',
+    },
   };
-  switchTheme= () => {
-    this.setState(({theme}) => {
-      if (theme === 'dark') {
+  switchTheme = () => {
+    this.setState(({value}) => {
+      if (value.theme === 'dark') {
         return {
-          theme: 'light',
+          value: {
+            theme: 'light',
+          },
         }
       } else {
         return {
-          theme: 'dark',
+          value: {
+            theme: 'dark',
+          },
         }
       }
     })
+  };
+  
+  changeTry = () => {
+    this.setState({
+      tryok: this.state.tryok + 1,
+    })
   }
   render() {
-    const {theme} = this.state;
+    console.log('App rendered');
     return (
       <div className="app">
         <Counter>
@@ -31,8 +44,9 @@ export default class App extends Component {
                                        incrementCount={incrementCount}
                                      />)}
         </Counter>
+        <button type="button" onClick={this.changeTry}>Try</button>
         <themeContext.Provider 
-          value={{theme,switchTheme:this.switchTheme}}
+          value={{...this.state.value,switchTheme:this.switchTheme}}
         >
           <Section />
         </themeContext.Provider>

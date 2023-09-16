@@ -1,5 +1,5 @@
 class Context {
-    constructor(value=null) {
+    constructor(value) {
         this.value = value;
     };
     
@@ -14,8 +14,8 @@ class Context {
     Consumer = children => children(this.value);
 }
 
-export default function createContext() {
-    const context = new Context();
+export default function createContext(value) {
+    const context = new Context(value);
     return {
         Provider: context.Provider,
         Consumer: context.Consumer,
