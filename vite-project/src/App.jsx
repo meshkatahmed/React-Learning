@@ -1,10 +1,12 @@
 import { Component } from "react";
-import ClickCounter from "./components/countersForRenderProps/ClickCounter";
-import Section from "./components/Section";
-import Counter from "./components/renderProps/Counter";
-import themeContext from "./contexts/themeContext";
-import Todo from "./components/Todo";
-import UsingPrevStateForuseState from "./components/UsingPrevStateForUseState";
+// import ClickCounter from "./components/countersForRenderProps/ClickCounter";
+// import Section from "./components/Section";
+// import Counter from "./components/renderProps/Counter";
+// import themeContext from "./contexts/themeContext";
+// import Todo from "./components/Todo";
+// import UsingPrevStateForuseState from "./components/UsingPrevStateForUseState";
+import MyFunctionComponent from "./components/Hooks/UseEffect/MyFunctionComponent";
+import MyClassComponent from "./components/Hooks/UseEffect/MyClassComponent";
 
 export default class App extends Component {
   // state = {
@@ -36,8 +38,11 @@ export default class App extends Component {
   //     tryok: this.state.tryok + 1,
   //   })
   // }
+  state = {
+    show: true,
+  }
   render() {
-    // console.log('App rendered');
+    const {show} = this.state;
     return (
       <div className="app">
         {/* <Counter>
@@ -52,7 +57,12 @@ export default class App extends Component {
         >
           <Section />
         </themeContext.Provider> */}
-        <UsingPrevStateForuseState/>
+        {/* <UsingPrevStateForuseState/> */}
+        <div>We shall learn useEffect() today</div>
+        {show && <MyFunctionComponent/>}
+        <button onClick={()=>this.setState({show:!show})}>
+          {show ? 'Hide' : 'Show'}
+        </button>
       </div>
     );
   }
