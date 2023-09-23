@@ -8,6 +8,8 @@
 // import MyFunctionComponent from "./components/Hooks/UseEffect/MyFunctionComponent";
 // import MyClassComponent from "./components/Hooks/UseEffect/MyClassComponent";
 
+
+
 // export default class App extends Component {
   // state = {
   //   tryok: 1,
@@ -102,10 +104,74 @@
 //   );
 // }
 
-
+// useRef hook
 // import Form from "./components/Hooks/useRef/Form"
-import Time from "./components/Hooks/useRef/Time"
+// import Time from "./components/Hooks/useRef/Time"
+
+// export default function App() {
+//   return <Time/>
+// }
+
+// useReducer hook
+// import { useReducer } from "react";
+
+// const initialState = 0;
+// const reducer = (state,action) => {
+//   switch (action) {
+//     case 'increment':
+//       return state + 1;
+//     case 'decrement':
+//       return state - 1;
+//     default:
+//       return state;
+//   }
+// }
+// export default function Counter() {
+//   const [count,dispatch] = useReducer(reducer,initialState);
+//   return (
+//     <div>
+//       <div>Count - {count}</div>
+//       <br />
+//       <button type="button" onClick={()=>dispatch('increment')}>Increment</button>
+//       <button type="button" onClick={()=>dispatch('decrement')}>Decrement</button>
+//     </div>
+//   );
+// }
+
+// useReducer hook - global stage usage
+// import { createContext, useReducer } from "react";
+// import ComponentA from "./components/Hooks/useReducer/componentHierarchy/ComponentA";
+
+// export const counterContext = createContext();
+// const initialState = 0;
+// const reducer = (state,action) => {
+//   switch (action) {
+//     case 'increment':
+//       return state + 1;
+//     case 'decrement':
+//       return state - 1;
+//     default:
+//       return state;
+//   }
+// }
+// export default function Counter() {
+//   const [count,dispatch] = useReducer(reducer,initialState);
+//   return (
+//     <div>
+//       <div>Count - {count}</div>
+//       <counterContext.Provider value={{countDispatch:dispatch}}>
+//         <ComponentA/>
+//       </counterContext.Provider>
+//     </div>
+//   );
+// }
+
+import GetPost2 from "./components/Hooks/useReducer/useReducerVSuseState/GetPost";
 
 export default function App() {
-  return <Time/>
+  return (
+    <div>
+      <GetPost2/>
+    </div>
+  );
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+import ComplexCounter from './components/Hooks/useReducer/complexCounter';
+import SeperateCounters from './components/Hooks/useReducer/SeperateCounters';
 // import Todo from '../src/components/Todo'
 // import reportWebVitals from './reportWebVitals'
 
