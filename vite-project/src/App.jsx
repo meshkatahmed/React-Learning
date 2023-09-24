@@ -166,12 +166,24 @@
 //   );
 // }
 
-import GetPost2 from "./components/Hooks/useReducer/useReducerVSuseState/GetPost";
+// useReducer vs useState
+// import GetPost2 from "./components/Hooks/useReducer/useReducerVSuseState/GetPost";
 
+// export default function App() {
+//   return (
+//     <div>
+//       <GetPost2/>
+//     </div>
+//   );
+// }
+
+// Custom hook
+import LayoutComponentOne from "./components/customHook/LayoutComponentOne";
+import LayoutComponentTwo from "./components/customHook/LayoutComponentTwo";
 export default function App() {
   return (
     <div>
-      <GetPost2/>
+      <div><LayoutComponentTwo/></div>
     </div>
   );
 }
