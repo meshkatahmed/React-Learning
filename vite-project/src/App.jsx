@@ -178,12 +178,24 @@
 // }
 
 // Custom hook
-import LayoutComponentOne from "./components/customHook/LayoutComponentOne";
-import LayoutComponentTwo from "./components/customHook/LayoutComponentTwo";
+// import LayoutComponentOne from "./components/customHook/LayoutComponentOne";
+// import LayoutComponentTwo from "./components/customHook/LayoutComponentTwo";
+// export default function App() {
+//   return (
+//     <div>
+//       <div><LayoutComponentTwo/></div>
+//     </div>
+//   );
+// }
+
+// Styling 
+import Logo from "./components/Styling/Logo";
+import './assets/CSS/global.css';
+
 export default function App() {
   return (
-    <div>
-      <div><LayoutComponentTwo/></div>
+    <div className="App">
+      <Logo/>
     </div>
   );
 }
