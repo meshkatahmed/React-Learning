@@ -189,13 +189,21 @@
 // }
 
 // Styling 
-import Logo from "./components/Styling/Logo";
-import './assets/CSS/global.css';
+// import Logo from "./components/Styling/Logo";
+// import './assets/CSS/global.css';
+
+// export default function App() {
+//   return (
+//     <div className="App">
+//       <Logo/>
+//     </div>
+//   );
+// }
+
+// styled-components
+import './assets/CSS/dark.css';
+import Tutorial from './components/Styling/styled-components/Tutorial';
 
 export default function App() {
-  return (
-    <div className="App">
-      <Logo/>
-    </div>
-  );
+  return <Tutorial/>
 }
