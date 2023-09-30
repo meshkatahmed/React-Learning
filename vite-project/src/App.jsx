@@ -201,9 +201,18 @@
 // }
 
 // styled-components
-import './assets/CSS/dark.css';
+// import './assets/CSS/dark.css';
+import GlobalStyles from './components/Styling/styled-components/styles/Global.styles';
 import Tutorial from './components/Styling/styled-components/Tutorial';
+// import { ThemeProvider } from 'styled-components';
 
 export default function App() {
-  return <Tutorial/>
+  return (
+    <>
+      <GlobalStyles/>
+      {/* <ThemeProvider theme={dark}> */}
+        <Tutorial/>
+      {/* </ThemeProvider> */}
+    </>
+  );
 }
