@@ -1,14 +1,12 @@
 import { NavLink } from "react-router-dom";
+import classes from "../../styles/Header.module.css";
 
 export default function Navbar() {
     return (
         <nav>
             <ul>
                 <li>
-                    <NavLink to="/" exact activeStyle={{
-                                                fontWeight: "bold",
-                                                color: "red"
-                                            }}>
+                    <NavLink to="/" exact activeClassName={classes.active}>
                         Home
                     </NavLink>
                 </li>

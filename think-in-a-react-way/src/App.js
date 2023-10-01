@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 // import Navbar from "./components/router-5/Navbar";
 // import Home from "./components/router-5/Home";
 // import About from "./components/router-5/About";
@@ -14,6 +14,7 @@ import Posts from "./components/router-5Torouter-6/Posts";
 function App() {
   const isLoggedIn = true;
   return (
+  // router 5 lecture
   //   <div className="App">
   //     <Navbar/>
   //     <Switch>
@@ -30,22 +31,18 @@ function App() {
   //     </Switch>
   //   </div>
   // );
+
+  // router 6 lecture
     <div className="App">
       <Header />
-      <Switch>
-        <Route path="/" exact>
-          <Redirect to="/hello" />
+      <Routes>
+        <Route path="/" element={<Navigate to="/hello" />} /> 
+        <Route path="/hello/*" element={<Hello />}>
+          <Route path="world" element={<p>This is world!</p>} />
         </Route>
-        <Route path="/hello">
-          <Hello />
-        </Route>
-        <Route path="/posts" exact>
-          <Posts />
-        </Route>
-        <Route path="/posts/:postId">
-          <Post />
-        </Route>
-      </Switch> 
+        <Route path="/posts/*" element={<Posts />} />
+        <Route path="/posts/:postId" element={<Post />} />
+      </Routes> 
     </div>
   );
 }
