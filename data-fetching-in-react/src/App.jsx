@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Quote from './components/fetch/Quote'
+import Quote from './components/axios/Quote'
 import './App.css'
 
 function App() {
