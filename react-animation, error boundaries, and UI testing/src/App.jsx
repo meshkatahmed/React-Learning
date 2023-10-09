@@ -9,7 +9,7 @@ function App() {
     exit: 500,
   }
   return (
-    <div>
+    <div className='App'>
       <button onClick={()=>setShow(!show)}>Toggle</button>
       <CSSTransition 
         in={show} 
